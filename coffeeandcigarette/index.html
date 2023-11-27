@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>coffee? cigarettes?</title>
+</head>
+<body>
+    <div class="background-image" id="background">
+
+        <div class="episodes">
+            <a href="ep1.html" class="button" data-image="images/01.png">
+                <span class="button-text">(1)</span>
+            </a>
+
+            <a href="ep2.html" class="button" data-image="images/02.png">
+                <span class="button-text">(2)</span>
+            </a>
+
+            <a href="ep3.html" class="button" data-image="images/03.png">
+                <span class="button-text">(3)</span>
+            </a>
+
+            <a href="ep4.html" class="button" data-image="images/04.png">
+                <span class="button-text">(4)</span>
+            </a>
+
+            <a href="ep5.html" class="button" data-image="images/05.png">
+                <span class="button-text">(5)</span>
+            </a>
+            <br>
+            <div style="color:lightgray">HOVER and...<br>...CLICK &#8598;&#8598;&#8598;&#8598;</div>
+        </div>
+
+        <div class="info">
+            <p class="info-kr">이곳은 짐 자무쉬의 영화 「커피와담배」를<br> 웹사이트로 번역한 공간입니다.<br>
+            스크린 중앙의 숫자들을 클릭하여 내용에<br> 따라 바뀌는 대화들의 모습을 확인하세요.</p>
+            <p class="info-en">
+            This website translates &#60;Coffee and Cigarettes&#62;&#44;<br>a film by Jim Jarmusch.
+            Click on the scattered<br> objects on the table to see the reimagined shapes<br> of the dialogues in the movie.</p>
+            <br>
+            <div class="nav">
+                <a href="read-all.html" class="shake-index" id="index" data-image="images/read-all.jpg">
+                    <img src="images/index.svg" alt="index">
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=L8CxZWazgxY" target="_blank" class="rotate-hab" id="hab">
+                    <img src="images/havebreak.svg" alt="have a break">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.button'); 
+
+            links.forEach(link => {
+                link.addEventListener('mouseenter', function(){
+                    const background = document.getElementById('background');
+                    const imageUrl = this.getAttribute('data-image') 
+                    background.style.backgroundImage = `url(${imageUrl})`;
+                });
+
+                /* not working...*/
+                link.addEventListener('mouseleave', function(){
+                    const background = document.getElementById('background');
+                    background.style.backgroundImage = "url('images/home.png')";
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.shake-index'); 
+
+            links.forEach(link => {
+                link.addEventListener('mouseenter', function(){
+                    const background = document.getElementById('background');
+                    const imageUrl = this.getAttribute('data-image') 
+                    background.style.backgroundImage = `url(${imageUrl})`;
+                });
+
+                /* not working...*/
+                link.addEventListener('mouseleave', function(){
+                    const background = document.getElementById('background');
+                    background.style.backgroundImage = "url('images/home.png')";
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

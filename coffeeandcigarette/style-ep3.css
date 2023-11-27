@@ -1,0 +1,175 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.intro {
+    margin: 0;
+    padding-top: 10px;
+    font-weight: 500;
+    text-align: center;
+    line-height: .8em;
+    font-size: 10pt;
+}
+
+.nav {
+    position: fixed;
+    left: 84vw;
+    top: 93vh;
+}
+
+.button {
+    width: auto; /* Set your preferred width */
+    padding: 14px; /* Set your preferred height */
+    margin-right: 10px;
+    background-color: white;
+    border: 0.5px solid rgb(114, 114, 114);
+    border-radius: 50%; /* This property makes the button a circle (ellipse in your case) */
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(114, 114, 114); /* Set your preferred text color */
+    font-size: 12px; /* Set your preferred font size */
+    font-weight: 400;
+    z-index: 99;
+  }
+  
+  #index:hover {
+    color:rgb(212, 127, 255);
+    background-color: #f0f0f0; /* Set your preferred hover background color */
+  }
+
+  #read-all:hover {
+    color:rgb(0, 234, 255);
+    background-color: #f4efef; /* Set your preferred hover background color */
+  }
+
+body {
+    height: 3000vh;
+    background-color: white;
+}
+
+img {
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -45%);
+    height: auto;
+    /* visibility: hidden; */
+    display: none;
+}
+
+.img-2 {
+    /* transform: 80%; */
+    width: 1000px;
+    height: auto;
+    transform-origin: 0 0;
+    transition: all 0s cubic-bezier(.71,0,.33,1.56) 0ms;
+    transition: all ease 1s; 
+}
+
+.img-4 {
+    transform: none;
+    /*left: -100%;*/
+    width: 95%;
+    left: 3%;
+    top: 40%;
+    display: block;
+    visibility: hidden;
+}
+
+
+.boom1 {
+    width: 23%;
+    height: 23%;
+    display: none;
+    left: 20%;
+    top: 30%;
+}
+
+.boom2 {
+    width: 30%;
+    height: 30%;
+    display: none;
+    left: 50%;
+    top: 60%;
+}
+
+.boom3 {
+    width: auto;
+    height: 55%;
+    display: none;
+    left: 80%;
+    top: 40%;
+}
+
+.container1 {
+    /* display: none; */
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    bottom: -5vw;
+    /* top: 35vw; */
+    transform: translate(0px, 0px);
+    /* margin: 0; */
+    font-family: 'Helvetica';
+    font-style: italic;
+    font-size: 10vw;
+    text-align: center;
+    /* margin-top: 50% */
+    z-index: 2;
+}
+
+.img-7 {
+    display: block;
+    visibility: hidden;
+    transform: scale(100%);
+    left: -100%;
+    top: 17%;
+    width: 70%;
+}
+
+.img-10 {
+    width: 30%;
+    height: auto;
+    display: none;
+    left: 25%;
+    top: 75%;
+}
+.img-11 {
+    width: 23%;
+    height: auto;
+    display: none;
+    left: 80%;
+    top: 60%;
+}
+.img-12 {
+    width: 50%;
+    height: auto;
+    display: none;
+    left: 40%;
+    top: 30%;
+}
+.img-13 {
+    transform-origin: 0 0;
+    transition: all 0s cubic-bezier(.71,0,.33,1.56) 0ms;
+}
+
+.img-14 {
+    display: block;
+    visibility: hidden;
+    transform: scale(100%);
+    left: -100%;
+    top: 35%;
+    bottom: 55%;
+    width: 30%;
+}
+
+.img-16 {
+    /* scale: 130%; */
+    top: 46%;
+    width: 57%;
+    height: auto;
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-ep2.css">
+    <title>coffee? cigarettes?</title>
+</head>
+<body>
+    <div class="background-image" id="background">
+        <div class="intro">
+            <p style="font-family: serif"> 이기 팝과 톰 웨이츠. 그들은 서로를 참을 수 없습니다. 조심하세요. 클릭은 그들을 더 예민하게 합니다. </p>
+            <p style="font-family: cursive;"> Iggy Pop and Tom Waits. They just can't stand each other. Click to see.</p>
+        </div>
+
+        <div class="container">
+            <div id="party1" class="conversation-panel">
+                <div id="text1" class="text" onclick="updateConversation(party1, 'text1', party2, 'text2')">이기라고 불러요.이기로 하죠.</div>
+            </div>
+        
+            <div id="party2" class="conversation-panel">
+                <div id="text2" class="text" onclick="updateConversation(party2, 'text2', party1, 'text1')">좋을대로 해요. 짐이든 이기든.</div>
+             </div>
+        </div>
+
+        <div class="nav">
+         <div class="nav">
+            <a href="read-all.html" class="shake-index" id="index">
+                <img src="images/index.svg" alt="index">
+            </a>
+    
+            <a href="index.html" id="bh">
+                <img src="images/backhome.svg" alt="back home">
+            </a>
+        </div> 
+    </div>
+
+    <script>
+        let party1 = document.getElementById('party1');
+        let party2 = document.getElementById('party2');
+    
+        let text1 = document.getElementById('text1');
+        let text2 = document.getElementById('text2');
+    
+        let sequence1 = ["주문해뒀어요.","괜찮다면요, 괜찮죠?","여기 자주 와요?", "주크박스에 당신 노래가 없길래.", "무슨 말이에요?", "내가 타코벨에 어울린단말이에요?.", "아뇨, 그런 말 안 했어요.", " 가고 싶지 않고요. 여기가 좋아요.","맞다, 그 드러머를 꼭 한번 만나봐요.","그냥 뮤지션끼리 이런 친구가 있다고 말하는 거예요.","관둬요,관둬.","이만 가봐야겠어요.","...","그럽시다.","잘 있어요.","..."];
+        let sequence2 = ["...내 걸 주문했다고요?","커피 괜찮죠.","단골 집이에요.", "여기가 마음에 안들면 타코벨을 가요.", "여기가 싫다면요. 타코벨을 더 좋아하려나?", "여기 싫다면서요?", "펜케이크 집에 가든지요.","...","나한테 전문 드러머가 필요하다?","그래서 뭐요? 지금 내 실력은 영 아니니까?","...","간다고요? 한 대 피우든가?","...", "또 봐요.","잘 있어요.","..."];
+    
+        let index1 = 0;
+        let index2 = 0;
+    
+        function updateConversation(activePanel, activeText, inactivePanel, inactiveText) {
+            let activeElement = document.getElementById(activeText);
+            let inactiveElement = document.getElementById(inactiveText);
+    
+            let newSize = Math.random() * 3 + 2; // Random size between 1 and 3
+    
+            activeElement.style.fontSize = newSize + 'em';
+    
+            if (activeText === 'text1') {
+                activeElement.innerText = sequence1[index1];
+                index1 = (index1 + 1) % sequence1.length;
+            } else if (activeText === 'text2') {
+                activeElement.innerText = sequence2[index2];
+                index2 = (index2 + 1) % sequence2.length;
+            }
+    
+            inactiveElement.style.fontSize = (4 - newSize) + 'em';
+    
+            let newFlex = Math.random();
+            activePanel.style.flex = newFlex;
+            inactivePanel.style.flex = 1 - newFlex;
+    
+            // Update text for inactive panel
+            if (inactiveText === 'text1') {
+                inactiveElement.innerText = sequence1[index1];
+                index1 = (index1 + 1) % sequence1.length;
+            } else if (inactiveText === 'text2') {
+                inactiveElement.innerText = sequence2[index2];
+                index2 = (index2 + 1) % sequence2.length;
+            }
+        }
+    </script>    
+</body>
+</html>

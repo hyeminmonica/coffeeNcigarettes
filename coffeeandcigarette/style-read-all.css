@@ -1,0 +1,129 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    word-break: keep-all;
+    user-select: none;
+    overflow: hidden;
+}
+
+body a{
+    text-decoration: none;
+    color: black;
+}
+
+.background-image {
+    background-image: url('images/background-readall.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+}
+
+.info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    left: 77.5%;
+    font-size: 15px;
+    
+    margin: 0;
+    background-color: white;
+}
+
+.info-kr {
+    font-family: serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 0;
+}
+
+.info-en {
+  font-family: cursive, serif;
+  margin:2px;
+}
+
+embed {
+    margin-top: 20px;
+    width: 70%;
+}
+
+.nav {
+    position: fixed;
+    display: inline;
+    cursor: pointer;
+    left: 85vw;
+    top: 87vh;
+}
+
+.nav a {
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+ #bh {
+    width: 15px;
+    height: auto;
+}
+
+#bh img{
+    width: 67px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+#bh :hover {
+    transform: scale(1.3);
+    filter: invert(0.8) sepia(1) saturate(5) hue-rotate(285deg) opacity(0.5);
+ }
+
+#hab img{
+    width: 80px;
+    height: auto;
+}
+
+#hab :hover {
+    transform: scale(1.1);
+    filter: invert(0.8) sepia(1) saturate(5) hue-rotate(175deg) opacity(0.5);
+}
+
+.rotate-hab img {
+transition: transform 0.3s ease;
+}
+
+.rotate-hab:hover img {
+animation: rotate 1s linear infinite;
+transform-origin: center;
+}
+
+@keyframes rotate {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+
+.list img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(10px);
+    max-width: 200px; /* Set the max-width of the image as needed */
+    max-height: 200px; /* Set the max-height of the image as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+li:hover img {
+    display: block;
+  }
+
+
+
